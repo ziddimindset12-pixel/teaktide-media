@@ -401,3 +401,12 @@ button.pc-chip:hover, button.pc-chip:focus-visible { border-color: var(--teak); 
 @media (max-width: 760px) {
   body .fb-tab { left: 0; top: 58%; bottom: auto; writing-mode: vertical-rl; transform: rotate(180deg); border-radius: 0 10px 10px 0; border-left: 0; padding: 12px 6px; font-size: 12px; letter-spacing: .06em; box-shadow: 0 4px 12px rgba(12,51,38,.25); }
 }
+
+/* Small buyers strip (home) */
+.small-buyers { padding-top: 8px; }
+.sb-box { background: var(--teak-soft, #f3ead9); border: 1px solid #e6d3b0; border-radius: 12px; padding: 26px 24px; display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+.sb-box h2 { margin: 6px 0 8px; }
+.sb-box p { color: var(--ink); margin: 0 0 10px; }
+.sb-list { margin: 0; padding-left: 18px; color: var(--ink); line-height: 1.6; }
+.sb-actions { display: flex; flex-direction: column; gap: 10px; }
+@media (max-width: 760px) { .sb-box { grid-template-columns: 1fr; padding: 22px 18px; } .sb-actions { flex-direction: row; flex-wrap: wrap; } }
