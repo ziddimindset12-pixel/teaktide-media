@@ -1,3 +1,4 @@
+window.PAGE_TITLE = document.title;
 
 var CATS = [
   { id: "agriculture", name: "Agricultural products", tag: "RICE · GRAINS · OILSEEDS",
@@ -143,7 +144,7 @@ var mnav = document.getElementById("mobile-nav"), mbtn = document.getElementById
 function route() {
   var h = location.hash ? location.hash.slice(1) : (window.PAGE_VIEW || "home");
   var cat = CATS.filter(function (c) { return c.id === h; })[0];
-  var view = cat ? "product" : (VIEWS.indexOf(h) > -1 ? h : "home");
+  var view = cat ? "product" : ((VIEWS.indexOf(h) > -1 || (/^[a-z0-9-]+$/.test(h) && document.querySelector('[data-view="' + h + '"]'))) ? h : "home");
   if (cat) renderProduct(cat);
   document.querySelectorAll("[data-view]").forEach(function (el) { el.classList.toggle("on", el.getAttribute("data-view") === view); });
   document.getElementById("cta").hidden = (view === "contact");
@@ -152,7 +153,7 @@ function route() {
     if (a.getAttribute("href") === "#" + cur || a.getAttribute("href") === PATHS[cur]) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
   mnav.hidden = true; mbtn.setAttribute("aria-expanded", "false");
-  document.title = cat ? cat.name + " from India | Teak & Tide Sourcing" : (TITLES[view] || "Teak & Tide Sourcing");
+  document.title = cat ? cat.name + " from India | Teak & Tide Sourcing" : (TITLES[view] || window.PAGE_TITLE || "Teak & Tide Sourcing");
   pathFix();
   window.scrollTo(0, 0);
 }
