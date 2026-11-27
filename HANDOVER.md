@@ -17,7 +17,7 @@ The scripts expect the site at `/home/claude/site3` and themselves at `/home/cla
 
 ## How the site is built
 - Every page is a static `index.html` with one `<div data-view="...">` block. `assets/app.js` registers views in `PATHS`, `VIEWS`, `NAV`, `TITLES` (and `POSTS` for blog cards). Product category pages are rendered by `renderProduct()` in app.js (the `GUIDES` map adds "Buyer guides" links).
-- Blog posts: content in `seo/posts_v*.py`, built with `build_posts_v2.build()` (template = makhana blog). Latest batch script: `seo/build_v7.py` (adds FAQ schema from `<details>`, author, cards, sitemap, app.js entries, cache-bust).
+- Blog posts: content in `seo/posts_v*.py`, built with `build_posts_v2.build()` (template = makhana blog). Latest batch script: `seo/build_v9.py` (posts in `seo/posts_v9.py`; earlier `build_v7.py`) (adds FAQ schema from `<details>`, author, cards, sitemap, app.js entries, cache-bust).
 - Top-level pages (services, tools): `seo/pages_v6.py` / `pages_v8.py` with `build_v6.py` (template = quality-inspection-india).
 - Cache-bust string in all HTML: `?v=YYYYMMDDx`. Bump it when CSS/JS changes.
 - Forms POST to `/` and are handled by `functions/index.js` (Cloudflare Function) → Make webhook → Google Sheet "Website Leads". Allowed form names are listed in that file.
