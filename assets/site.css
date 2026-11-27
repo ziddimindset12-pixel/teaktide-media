@@ -410,3 +410,6 @@ button.pc-chip:hover, button.pc-chip:focus-visible { border-color: var(--teak); 
 .sb-list { margin: 0; padding-left: 18px; color: var(--ink); line-height: 1.6; }
 .sb-actions { display: flex; flex-direction: column; gap: 10px; }
 @media (max-width: 760px) { .sb-box { grid-template-columns: 1fr; padding: 22px 18px; } .sb-actions { flex-direction: row; flex-wrap: wrap; } }
+.ctry .ctry-links { font-size: 0.88rem; color: var(--ink, inherit); margin-top: 4px; }
+.ctry .ctry-links a, .guide-links a { color: var(--teak); text-decoration: underline; text-underline-offset: 3px; }
+.guide-links { line-height: 2; }
