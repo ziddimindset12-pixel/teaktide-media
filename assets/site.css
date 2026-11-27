@@ -431,3 +431,5 @@ button.pc-chip:hover, button.pc-chip:focus-visible { border-color: var(--teak); 
 .ctry .ctry-links { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:.8rem; letter-spacing:.06em; color:var(--muted); margin-top:10px; }
 .ctry .ctry-links a { text-decoration:none; padding:5px 11px; border:1px solid var(--teak); border-radius:999px; color:var(--tide); background:var(--teak-soft); font-weight:600; letter-spacing:0; font-size:.85rem; }
 .ctry .ctry-links a:hover { background:var(--teak); color:#fff; }
+.ck-top { padding: 28px 0 8px; }
+@media (max-width:640px){ .ck-top { padding: 20px 0 4px; } }
