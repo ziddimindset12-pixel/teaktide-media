@@ -3,7 +3,7 @@
 // the Make webhook. GET requests to "/" are not handled here and fall through
 // to the static homepage.
 const HOOK = "https://hook.eu1.make.com/t8a2ppbsqv4qedatlk2f3qw8qy2xan86";
-const FORMS = new Set(["quote", "feedback", "product-search-miss"]);
+const FORMS = new Set(["quote", "feedback", "product-search-miss", "checklist"]);
 
 export async function onRequestPost({ request }) {
   try {
