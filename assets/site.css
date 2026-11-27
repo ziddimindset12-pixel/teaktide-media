@@ -413,3 +413,21 @@ button.pc-chip:hover, button.pc-chip:focus-visible { border-color: var(--teak); 
 .ctry .ctry-links { font-size: 0.88rem; color: var(--ink, inherit); margin-top: 4px; }
 .ctry .ctry-links a, .guide-links a { color: var(--teak); text-decoration: underline; text-underline-offset: 3px; }
 .guide-links { line-height: 2; }
+.ck-banner { display:flex; gap:22px; align-items:center; justify-content:space-between; margin:34px 0 10px; padding:26px 28px; border-radius:14px; background:linear-gradient(135deg,#0c3326,#123f2f); color:#eef2ec; border:1px solid #a8742c; }
+.ck-banner h3 { color:#fff; margin:6px 0 8px; font-size:1.45rem; }
+.ck-banner p { margin:0; color:#d9e3dc; }
+.ck-eyebrow { font-size:.72rem; letter-spacing:.2em; color:#e2b56f; font-weight:600; }
+.ck-btn { background:#e2b56f; color:#0c3326; border:0; white-space:nowrap; font-weight:700; }
+.ck-btn:hover { background:#f0cf8c; }
+.guide-h { margin:38px 0 4px; font-size:1.5rem; }
+.guide-sub { margin:0 0 18px; color:var(--muted); }
+.guide-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:12px; }
+.guide-tile { display:flex; flex-direction:column; gap:4px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); text-decoration:none; color:var(--ink); transition:border-color .15s, transform .15s; }
+.guide-tile:hover { border-color:var(--teak); transform:translateY(-2px); }
+.guide-tile span { font-size:.68rem; letter-spacing:.16em; color:var(--teak); font-weight:600; }
+.guide-tile strong { font-size:1.05rem; line-height:1.3; }
+.guide-tile em { font-style:normal; font-size:.85rem; color:var(--teak); margin-top:auto; }
+@media (max-width:640px){ .ck-banner{flex-direction:column;align-items:flex-start;padding:22px} .guide-grid{grid-template-columns:1fr 1fr} .guide-tile{padding:13px} .guide-tile strong{font-size:.98rem} }
+.ctry .ctry-links { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:.8rem; letter-spacing:.06em; color:var(--muted); margin-top:10px; }
+.ctry .ctry-links a { text-decoration:none; padding:5px 11px; border:1px solid var(--teak); border-radius:999px; color:var(--tide); background:var(--teak-soft); font-weight:600; letter-spacing:0; font-size:.85rem; }
+.ctry .ctry-links a:hover { background:var(--teak); color:#fff; }
